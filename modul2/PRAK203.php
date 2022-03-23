@@ -5,18 +5,20 @@
     if (isset($_POST['enter'])) {
 
         $suhu = $_POST['nilai'];
-        $fromTeamp = $_POST['fromTemp'];
+        $fromTemp = $_POST['fromTemp'];
         $toTemp = $_POST['toTemp'];
         $hasil;
     }
     ?>
     <form action="" method="post">
         Nilai : <input type="text" name="nilai" value="<?php if (isset($suhu)) echo $suhu ?>">
-        <br> Dari: <br>
-        <input type="radio" name="fromTeamp" <?php if (isset($fromTeamp) && $fromTeamp == "Celcius") echo "checked"; ?> value="Celcius"> Celcius <br>
-        <input type="radio" name="fromTeamp" <?php if (isset($fromTeamp) && $fromTeamp == "Fahrenheit") echo "checked"; ?> value="Fahrenheit"> Fahrenheit <br>
-        <input type="radio" name="fromTeamp" <?php if (isset($fromTeamp) && $fromTeamp == "Rheamur") echo "checked"; ?> value="Rheamur"> Rheamur <br>
-        <input type="radio" name="fromTeamp" <?php if (isset($fromTeamp) && $fromTeamp == "Kelvin") echo "checked"; ?> value="Kelvin"> Kelvin <br>
+        <br> 
+        Dari: 
+        <br>
+        <input type="radio" name="fromTemp" <?php if (isset($fromTemp) && $fromTemp == "Celcius") echo "checked"; ?> value="Celcius"> Celcius <br>
+        <input type="radio" name="fromTemp" <?php if (isset($fromTemp) && $fromTemp == "Fahrenheit") echo "checked"; ?> value="Fahrenheit"> Fahrenheit <br>
+        <input type="radio" name="fromTemp" <?php if (isset($fromTemp) && $fromTemp == "Rheamur") echo "checked"; ?> value="Rheamur"> Rheamur <br>
+        <input type="radio" name="fromTemp" <?php if (isset($fromTemp) && $fromTemp == "Kelvin") echo "checked"; ?> value="Kelvin"> Kelvin <br>
 
         Ke : <br>
         <input type="radio" name="toTemp" <?php if (isset($toTemp) && $toTemp == "Celcius") echo "checked"; ?> value="Celcius"> Celcius <br>
@@ -27,7 +29,7 @@
     </form>
     <?php
     if (isset($_POST['enter'])) {
-        switch ($fromTeamp) {
+        switch ($fromTemp) {
             case "Celcius":
                 switch ($toTemp) {
                     case 'Celcius':
