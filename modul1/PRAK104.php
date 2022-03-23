@@ -3,16 +3,26 @@
         "Samsung Galaxy S22+", 
         "Samsung Galaxy A03", 
         "Samsung Galaxy Xcover 5");
-        
-    $tArray = count($phone);
-    echo "<table border='1' width='230'>";
-    echo "<tr>";
-    echo "<th>Daftar Smarthphone Samsung</th>";
-    echo "</tr>";
-    for ($i=0; $i < $tArray; $i++) { 
-        echo "<tr>";
-        echo "<td>$phone[$i]</td>";
-        echo "</tr>";
-    }
-    echo "</table>";
 ?>
+
+<html>
+    <body>
+        <table border='1' width='240'>
+            <thead>
+                <tr>
+                    <th>Daftar Smarthphone Samsung</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+                $tArray = count($phone);
+                for ($i=0; $i < $tArray; $i++) { 
+                    echo "<tr>";
+                    echo "<td>$phone[$i]</td>";
+                    echo "</tr>";
+                }
+            ?>
+            </tbody>
+        </table>
+    </body>
+</html>
