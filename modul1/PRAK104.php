@@ -4,7 +4,6 @@
         "Samsung Galaxy A03", 
         "Samsung Galaxy Xcover 5");
 ?>
-
 <html>
     <body>
         <table border='1' width='240'>
