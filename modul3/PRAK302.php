@@ -3,8 +3,11 @@
         <title>soal 2</title>
         <style type="text/css">
             img {
-                width : 16px;
-                height : 16px;
+                width : 30px;
+                height : 30px;
+            }
+            table {
+                text-align: right;
             }
         </style>
     </head>
